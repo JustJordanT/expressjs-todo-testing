@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest --watchAll"
+    "test": "jest --watchAll",
+    "test-details": "jest --verbose --detectOpenHandles --runInBand"
   },
   "keywords": [],
   "author": "jordan_taylor",
