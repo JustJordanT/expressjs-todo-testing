@@ -21,9 +21,9 @@ describe(endPointUrl, () => {
       .post(endPointUrl)
       .send({ title: "Missing done property" });
     expect(response.statusCode).toBe(500);
-    expect(response.body).toStrictEqual({
-      message: "Todo validation failed: done: Path `done` is required.",
-    });
+    expect(response.body.message).toStrictEqual(
+      "Todo validation failed: done: Path `done` is required."
+    );
   });
 
   it("GET " + endPointUrl, async () => {
@@ -44,9 +44,7 @@ describe(endPointUrl, () => {
 
       const response = await request(app).get(endPointUrl);
       expect(response.statusCode).toBe(500);
-      expect(response.body).toStrictEqual({
-        message: "Server error",
-      });
+      expect(response.body.message).toStrictEqual("Server error");
 
       // Restore the original implementation
       Todo.find.mockRestore();

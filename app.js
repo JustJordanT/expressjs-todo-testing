@@ -1,6 +1,8 @@
 const express = require("express");
 const todoRoutes = require("./routes/todo.routes");
 const mongodb = require("./mongodb.connect");
+const notFoundHandler = require("./middlewares/notfound.middleware");
+const errorHandler = require("./middlewares/error.middleware");
 
 console.log("Starting the server...");
 console.log("Connecting to the database...");
@@ -12,8 +14,8 @@ app.use(express.json());
 
 app.use("/todos", todoRoutes);
 
-app.use((error, req, res, next) => {
-  res.status(500).json({ message: error.message });
-});
+// Error handling
+app.use(notFoundHandler); // Handle 404s
+app.use(errorHandler); // Handle all other errors
 
 module.exports = app;
