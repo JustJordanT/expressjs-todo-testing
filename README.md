@@ -2,6 +2,9 @@
 
 This project is a simple Todo application developed using Test-Driven Development (TDD) methodology.
 
+![Clipboard-20241220-170624-278](https://github.com/user-attachments/assets/52d4d97b-c82d-4837-84a6-92a8878d74c4)
+
+
 ## Features
 
 - Add new todo items
