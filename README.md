@@ -1,6 +1,12 @@
 # expressjs-todo-testing
+![image](https://github.com/user-attachments/assets/ec8fb247-c318-4360-a5db-6aa3cd3a6e06)
+
 
 This project is a simple Todo application developed using Test-Driven Development (TDD) methodology.
+
+
+![Clipboard-20241220-170624-278](https://github.com/user-attachments/assets/52d4d97b-c82d-4837-84a6-92a8878d74c4)
+
 
 ## Features
 
@@ -13,31 +19,31 @@ This project is a simple Todo application developed using Test-Driven Developmen
 
 1. Clone the repository:
    ```sh
-   git clone https://github.com/yourusername/todo-tdd.git
+   git clone git@github.com:JustJordanT/expressjs-todo-testing.git
    ```
 2. Navigate to the project directory:
    ```sh
-   cd todo-tdd
+   cd expressjs-todo-testing
    ```
 3. Install dependencies:
    ```sh
-   npm install
+   pnpm install
    ```
 
 ## Usage
 
 1. Run the application:
    ```sh
-   npm start
+   node server.js
    ```
-2. Open your browser and navigate to `http://localhost:3000`.
+2. Open your HTTP client ie postman and navigate to `http://localhost:3000`. POST/GET/DELETE /todos/id 
 
 ## Running Tests
 
 To run the tests, use the following command:
 
 ```sh
-npm test
+pnpm test
 ```
 
 ## Contributing
