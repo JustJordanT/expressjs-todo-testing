@@ -25,7 +25,7 @@ jobs:
           version: 8
         # set env var
         env:
-          MONGO_URL: ${{ secrets.MONGO_URL }}
+          MONGO_URI: ${{ secrets.MONGO_URI }}
           #    - run: pnpm ci
         #    - run: pnpm run build --if-present
       - run: pnpm install
