@@ -20,10 +20,10 @@ jobs:
         uses: pnpm/action-setup@v2
         with:
           version: 8
-      - name: 'Create .env file'
-          run: |
-            touch .env.development
-            echo MONGO_URI=${{ secrets.MONGO_URI }} >> .env.development
+      - name: "Create .env file"
+        run: |
+          touch .env.development
+          echo MONGO_URI=${{ secrets.MONGO_URI }} >> .env.development
       - run: pnpm install
       # - run: pnpm ci
       # - run: pnpm run build --if-present
