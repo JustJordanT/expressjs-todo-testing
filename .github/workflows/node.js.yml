@@ -23,7 +23,10 @@ jobs:
         uses: pnpm/action-setup@v2
         with:
           version: 8
-        #    - run: pnpm ci
+        # set env var
+        env:
+          MONGO_URL: ${{ secrets.MONGO_URL }}
+          #    - run: pnpm ci
         #    - run: pnpm run build --if-present
       - run: pnpm install
       - run: pnpm test

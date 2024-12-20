@@ -11,7 +11,9 @@
   "author": "jordan_taylor",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^16.4.7",
     "express": "^4.21.2",
+    "joi": "^17.13.3",
     "mongoose": "^8.9.2",
     "node-mocks": "^1.0.1",
     "node-mocks-http": "^1.16.2"
