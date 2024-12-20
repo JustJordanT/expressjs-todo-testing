@@ -14,16 +14,16 @@ jobs:
       matrix:
         node-version: [20.x, 22.x]
 
-    env:
-      MONGO_URI: ${{ secrets.MONGO_URI }}
-
     steps:
       - uses: actions/checkout@v4
       - name: Install pnpm
         uses: pnpm/action-setup@v2
         with:
           version: 8
-      - run: echo $MONGO_URI
+      - name: 'Create .env file'
+          run: |
+            touch .env.development
+            echo MONGO_URI=${{ secrets.MONGO_URI }} >> .env.development
       - run: pnpm install
       # - run: pnpm ci
       # - run: pnpm run build --if-present
